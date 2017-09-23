@@ -7,50 +7,33 @@
 	
 </head>
 <script type="text/javascript">
-//方法1 循环遍历
-function factorialize1(num) {
+function titleCase(str) {
   // 请把你的代码写在这里
-  if(num === 0)
-    {
-      return 1;
-    }
-  var index = num -1;
-  var mal = num;
-  while(index > 0)
-    {
-      mal = index * mal;
-       index --;
-    }
+  
+  var array = str.toLowerCase().split(' ');
+  str = "";
+  array = array.map(
+    function (val)
+     {
+      if(str === "")
+      {
+          str = val.substring(0, 1).toUpperCase()+ val.substring(1);
+      }
+      else
+      {
+         str += " " + val.substring(0, 1).toUpperCase()+ val.substring(1);
+      }
+     
+      return val;
+     }
+  );
 
-   
-   return mal;
+
+  console.log(str);
+  return str;
 }
 
-
-//方法2 递归
-function factorialize(num)
-{
-  if(num === 0) 
-   {
-     return 1;
-   }
-   var cal = num;
-   cal = exfactorialize(num, cal);
-   return cal;
-}
-
-//递归 实现
-function exfactorialize(num, cal)
-{
-   cal = cal * (num - 1); 
-    if(num > 2)
-    {
-       return exfactorialize(num-1, cal);
-    }
-    return cal;
-}
-
-factorialize(5);
+titleCase("sHoRt AnD sToUt");
 
 
 
