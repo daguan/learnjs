@@ -6,14 +6,14 @@
 function titleCase(str) {
   // 请把你的代码写在这里
   
-  var array = str.toLowerCase().split(' ');
+  var array = str.toLowerCase().split(' '); //所有的小写以后再数组化
   str = "";
-  array = array.map(
+  array = array.map( //遍历
     function (val)
      {
       if(str === "")
       {
-          str = val.substring(0, 1).toUpperCase()+ val.substring(1);
+          str = val.substring(0, 1).toUpperCase()+ val.substring(1); //头字母大写
       }
       else
       {
