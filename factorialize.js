@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>五子棋</title>
-	<meta charset="utf-8">
-	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-	
-</head>
-<script type="text/javascript">
+/*
+* @param 整数的阶乘实现的两种方式 
+* @param Author@daguan.fudimen.com 
+ */
+
 //方法1 循环遍历
 function factorialize1(num) {
   // 请把你的代码写在这里
@@ -51,20 +47,3 @@ function exfactorialize(num, cal)
 }
 
 factorialize(5);
-
-
-
-
-</script>
-
-<body>
-	<canvas id="chess" width="450px" height="450px"></canvas>
-	<!--<script type="text/javascript" src="js/script.js"></script>-->
-	<input type="button" id="start" value="start">
-</body>
-
-
-</html>
-<?php
-echo "Hello World";
-?>
