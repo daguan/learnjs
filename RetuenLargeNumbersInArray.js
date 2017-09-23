@@ -1,5 +1,6 @@
 /*
-* @param 二叉树排序查找最大值
+* @param ①二叉树排序查找最大值
+* @param ②使用Math自带属性实现
 * @param Author@daguan.fudimen.com 
  */
 
@@ -94,3 +95,18 @@ function largestOfFour(arr) {
 }
 
 largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+//使用Math自带属性
+function largestOfFour2(arr) {
+  // 请把你的代码写在这里
+  // 
+  var newArray = [];
+  for(var i=0; i<arr.length; i++)
+  {
+    var max = Math.max(...arr[i]);
+    newArray.push(max);
+  }
+  return newArray;
+}
+
+largestOfFour2([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
